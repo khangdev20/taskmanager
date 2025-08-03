@@ -1,4 +1,5 @@
-const Task = require('../models/Task');
+import Task from '../models/Task.js';
+
 export const getTasks = async (req, res) => {
 	try {
 		const tasks = await Task.find({ userId: req.user.id });
